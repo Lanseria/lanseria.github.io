@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="javascript,算法,数据结构,尺取法,堆栈,队列,优先队列," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="提示 这系列文章我会时常更新，时间也会相对应的更新，如果对前文想略过，可以直接点击这里今天来讲什么的？我只能说小算法  前言现在还没工作的我，对IT互联网的技术也有自己的一番认知，同时尽量把我所知道的传播给下面的学弟学妹，让她们提提力气，不要只局限于老师所教的知识就以为，以为计算机这个大专业就这么点东西。虽然身在电科这个很·棒的专业，但我也在日常与室友计科软工的带领下，自己走向一条对自己适合的道">
+<meta name="keywords" content="javascript,算法,数据结构,尺取法,堆栈,队列,优先队列">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法，Javascript也有算法(1)">
+<meta property="og:url" content="https://lanseria.github.com/2017/07/23/算法，Javascript也有算法/index.html">
+<meta property="og:site_name" content="Lanseria">
+<meta property="og:description" content="提示 这系列文章我会时常更新，时间也会相对应的更新，如果对前文想略过，可以直接点击这里今天来讲什么的？我只能说小算法  前言现在还没工作的我，对IT互联网的技术也有自己的一番认知，同时尽量把我所知道的传播给下面的学弟学妹，让她们提提力气，不要只局限于老师所教的知识就以为，以为计算机这个大专业就这么点东西。虽然身在电科这个很·棒的专业，但我也在日常与室友计科软工的带领下，自己走向一条对自己适合的道">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://images.cnitblog.com/blog/597004/201408/291224259702079.jpg">
+<meta property="og:image" content="https://yuhaomin.github.io/uploads/images/1-1%E5%B0%BA%E5%8F%96%E6%B3%95.png">
+<meta property="og:updated_time" content="2017-07-25T13:25:38.161Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="算法，Javascript也有算法(1)">
+<meta name="twitter:description" content="提示 这系列文章我会时常更新，时间也会相对应的更新，如果对前文想略过，可以直接点击这里今天来讲什么的？我只能说小算法  前言现在还没工作的我，对IT互联网的技术也有自己的一番认知，同时尽量把我所知道的传播给下面的学弟学妹，让她们提提力气，不要只局限于老师所教的知识就以为，以为计算机这个大专业就这么点东西。虽然身在电科这个很·棒的专业，但我也在日常与室友计科软工的带领下，自己走向一条对自己适合的道">
+<meta name="twitter:image" content="http://images.cnitblog.com/blog/597004/201408/291224259702079.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://lanseria.github.com/2017/07/23/算法，Javascript也有算法/"/>
+
+
+
+
+
+  <title>算法，Javascript也有算法(1) | Lanseria</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-100927505-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lanseria</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">vhikZhangchao</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lanseria.github.com/2017/07/23/算法，Javascript也有算法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vhikZhangchao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lanseria">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">算法，Javascript也有算法(1)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-23T21:11:07+08:00">
+                2017-07-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/面试/" itemprop="url" rel="index">
+                    <span itemprop="name">面试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p><strong>提示</strong> 这系列文章我会时常更新，时间也会相对应的更新，如果对前文想略过，可以直接点击这里<a href="/2017/07/23/算法，Javascript也有算法/#今天来讲什么的？我只能说小算法">今天来讲什么的？我只能说小算法</a></p>
+</blockquote>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>现在还没工作的我，对IT互联网的技术也有自己的一番认知，同时尽量把我所知道的传播给下面的学弟学妹，让她们提提力气，不要只局限于老师所教的知识就以为，以为计算机这个大专业就这么点东西。<br>虽然身在电科这个很·棒的专业，但我也在日常与室友计科软工的带领下，自己走向一条对自己适合的道路。<br>什么都会点，还是不太精，什么都做过点项目，但是成品还是有点粗糙。我的理念也不像那些呆在实验室的人一样，老师给什么，就做什么。老师提什么，我都会跟他一块去讨论，将别人的想法稍稍改变下，总的来说，使项目朝着自己所期望的做，所以一般情况下，项目转交给别人，一般就传不下去了……<br> <a id="more"></a></p>
+<h1 id="废话又扯多了，算法，咳咳"><a href="#废话又扯多了，算法，咳咳" class="headerlink" title="废话又扯多了，算法，咳咳"></a>废话又扯多了，算法，咳咳</h1><p>说实话，大一参加ACM我竟然退了，现在开始想想也挺后悔的，更后悔的是还在一个现在根本不想呆的地方，浪费了我这么多时间。<br>说到ACM，难免会提到算法，可能大一的我没能认识到算法的重要性，觉得它并有没实际的优越感，就放弃了，想想很可惜的。<br>好的程序 = 优秀的算法 + 可靠的数据结构<br>万年不变的真理啊，但真正能掌握他们的人，少之又少。</p>
+<h1 id="Javascript需要算法吗？"><a href="#Javascript需要算法吗？" class="headerlink" title="Javascript需要算法吗？"></a>Javascript需要算法吗？</h1><p>甚至更加简单一点的，前端需要算法吗？<br>可能很多人都会说，不就是写界面吗？还需要这么高深的算法吗？<br>对，你们所知道的前端还是过去的前端，属于设计师与代码混合的年代，而现在分工却更加的明确。前端需要更多的知识填充，而这些知识包括，websocket，tcp，http，网络，linux这些后端才会遇到的知识。所以，想当然，算法是完全有必要的。</p>
+<h1 id="今天来讲什么的？我只能说小算法"><a href="#今天来讲什么的？我只能说小算法" class="headerlink" title="今天来讲什么的？我只能说小算法"></a>今天来讲什么的？我只能说小算法</h1><p>个人比较谦虚，真是不会太难的算法，所以这里只能将我了解到的算法，在这里给你们分享下，当然，介绍算法的同时不会忘记介绍JavaScript中的数据结构。</p>
+<ul>
+<li><p>推荐的OJ：</p>
+<ul>
+<li><a href="https://leetcode.com/" target="_blank" rel="noopener">LeetCode</a></li>
+</ul>
+</li>
+<li><p>阅读推荐：</p>
+<ul>
+<li><a href="https://book.douban.com/subject/20432061/" target="_blank" rel="noopener">算法导论</a></li>
+<li><a href="https://book.douban.com/subject/26337727/" target="_blank" rel="noopener">算法设计与分析基础</a></li>
+<li><a href="https://book.douban.com/subject/26638586/" target="_blank" rel="noopener">程序员代码面试指南：IT名企算法与数据结构题目最优解</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="一、数据结构"><a href="#一、数据结构" class="headerlink" title="一、数据结构"></a>一、数据结构</h2><p>参考：<a href="http://www.thatjsdude.com/interview/linkedList.html" target="_blank" rel="noopener">http://www.thatjsdude.com/interview/linkedList.html</a></p>
+<h3 id="1-堆栈和队列"><a href="#1-堆栈和队列" class="headerlink" title="1.堆栈和队列"></a>1.堆栈和队列</h3><p>如果不是 JavaScript 的新手，应该知道JavaScript是已经自己实现了堆栈和队列。<br>你只需要简单的调用 <code>push</code> ， <code>pop</code> ， <code>shift</code> 这些操作 <code>array</code> 的函数即可。<br>不过，你甚至对C++中的优先队列有点印象的话，也有人实现了类似的原型构造，<br><a href="https://github.com/janogonzalez/priorityqueuejs/blob/master/index.js" target="_blank" rel="noopener">priorityQueueJS的简化版本</a><br>堆栈：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myStack = [];</span><br><span class="line"></span><br><span class="line"><span class="comment">//push</span></span><br><span class="line">myStack.push(<span class="number">1</span>);</span><br><span class="line">myStack.push(<span class="number">2</span>);</span><br><span class="line">myStack.push(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//pop</span></span><br><span class="line">myStack.pop(); <span class="comment">//3</span></span><br><span class="line">myStack.pop(); <span class="comment">//2</span></span><br><span class="line">myStack.pop(); <span class="comment">//1</span></span><br></pre></td></tr></table></figure></p>
+<p>队列：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myQueue = [];</span><br><span class="line"></span><br><span class="line"><span class="comment">//push</span></span><br><span class="line">myQueue.push(<span class="number">1</span>);</span><br><span class="line">myQueue.push(<span class="number">2</span>);</span><br><span class="line">myQueue.push(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//pop</span></span><br><span class="line">myQueue.shift(); <span class="comment">//1</span></span><br><span class="line">myQueue.shift(); <span class="comment">//2</span></span><br><span class="line">myQueue.shift(); <span class="comment">//3</span></span><br></pre></td></tr></table></figure></p>
+<p>Priority Queue优先队列<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> PriorityQueue = <span class="built_in">require</span>(<span class="string">'./priorityqueue'</span>)</span><br><span class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> PriorityQueue();</span><br><span class="line">p.enq(<span class="number">1</span>);</span><br><span class="line">p.enq(<span class="number">3</span>);</span><br><span class="line">p.enq(<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(p.deq())</span><br><span class="line"><span class="built_in">console</span>.log(p.deq())</span><br><span class="line"><span class="built_in">console</span>.log(p.deq())</span><br><span class="line"><span class="built_in">console</span>.log(p);</span><br></pre></td></tr></table></figure></p>
+<h2 id="二、算法"><a href="#二、算法" class="headerlink" title="二、算法"></a>二、算法</h2><p>算法不像数据结构，每个人都有每个人的想法，思维的不一样，导致写出来的代码精炼程度也不大一样，所以，我这里在我自己与室友的帮助下，会写下自己在 <a href="https://leetcode.com/" target="_blank" rel="noopener">LeetCode</a>中的题解，与之对应的算法。</p>
+<h3 id="1-尺取法"><a href="#1-尺取法" class="headerlink" title="1.尺取法"></a>1.尺取法</h3><blockquote>
+<p>去一块一块地去截取你所要的序列，一旦不满足就后自增1，前再去探索，使其满足要求，也如同蚯蚓的爬动，用O(n)的复杂度，求得最优值。</p>
+</blockquote>
+<p><img src="http://images.cnitblog.com/blog/597004/201408/291224259702079.jpg" alt="图解"><br><img src="https://yuhaomin.github.io/uploads/images/1-1%E5%B0%BA%E5%8F%96%E6%B3%95.png" alt="图解"><br>尺取法我想我这种程度是想不到类似巧妙的算法的，我之前的算法自己想想就觉得太复杂了。而且呢。没有AC掉题，代码真是又臭又长。之后寻求了室友的帮助提示，他告诉了我尺取法来解决这类序列不动求其最长或最短的方法，一下子就把问题变得简单了。<br>所以以后遇到类似的问题，不用在意是数字还是字母，只要要求序列不排序，就可以用此方法解决。</p>
+<p>举个 <a href="https://leetcode.com/" target="_blank" rel="noopener">LeetCode</a> 中较为形象的题型</p>
+<h4 id="1-例题：求最长子字符串"><a href="#1-例题：求最长子字符串" class="headerlink" title="1.例题：求最长子字符串"></a>1.例题：求最长子字符串</h4><p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="noopener">Longest Substring Without Repeating Characters</a></p>
+<blockquote>
+<p><strong>Description</strong><br>Given a string, find the length of the longest substring without repeating characters.<br>Examples:<br>Given <code>&quot;abcabcbb&quot;</code>, the answer is <code>&quot;abc&quot;</code>, which the length is 3.<br>Given <code>&quot;bbbbb&quot;</code>, the answer is <code>&quot;b&quot;</code>, with the length of 1.<br>Given <code>&quot;pwwkew&quot;</code>, the answer is <code>&quot;wke&quot;</code>, with the length of 3. Note that the answer must be a substring, <code>&quot;pwke&quot;</code> is a subsequence and not a substring.</p>
+</blockquote>
+<p>这里它还提醒我们跟之前的题不太一样，这个序列不准变，不是求最长子序列，是最长子字符串<br>来说说我之前的复杂的想法吧，首先将字符串转化成数组，然后慢慢去用 <code>new Map()</code> 这类数据类型去找不一样的字符串，如果不对记录下其长度，放入数组中，最后求出最大值，<br>！但是这个解决方案看似完美，但有致命的缺点，就是忽略了第一次确定了那个最长序列之中的有可能的最长序列。所以让我们还是用最优的方案吧–尺取法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;string&#125; s</span></span><br><span class="line"><span class="comment"> * @return &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> lengthOfLongestSubstring = <span class="function"><span class="keyword">function</span>(<span class="params">s</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line">  <span class="keyword">var</span> Imax = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">var</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="keyword">while</span>(j&lt;s.length &amp;&amp; !m.has(s.charAt(j)))&#123;</span><br><span class="line">      m.set(s.charAt(j));</span><br><span class="line">      j++; </span><br><span class="line">    &#125;</span><br><span class="line">    Imax = <span class="built_in">Math</span>.max(Imax, j-i);</span><br><span class="line">    <span class="keyword">if</span>(j &gt;= s.length)</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    m.delete(s.charAt(i++));</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> Imax;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>说明</strong><br>这个整体思路就相当清晰了，除了避免了字符串变数组的多余的循环，也添加了尺取法的构思，可看到，while这个语句在算法中是经常能用到的。<br>首先利用es6的新特性，map数据结构，使这个数据有数据有字典的属性，可以方便的查询。然后定义头与尾，用头去探索，尾部去迭代，只要头部探索完毕，就释放尾部进1。使头部继续去探索。最后求得最大值。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+            <a href="/tags/算法/" rel="tag"># 算法</a>
+          
+            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
+          
+            <a href="/tags/尺取法/" rel="tag"># 尺取法</a>
+          
+            <a href="/tags/堆栈/" rel="tag"># 堆栈</a>
+          
+            <a href="/tags/队列/" rel="tag"># 队列</a>
+          
+            <a href="/tags/优先队列/" rel="tag"># 优先队列</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/08/重新整理下自己，轻装上阵/" rel="next" title="重新整理下自己，轻装上阵">
+                <i class="fa fa-chevron-left"></i> 重新整理下自己，轻装上阵
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/25/算法，Javascript也有算法-2/" rel="prev" title="算法，Javascript也有算法(2)">
+                算法，Javascript也有算法(2) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTEzMy81NzAx"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="vhikZhangchao" />
+            
+              <p class="site-author-name" itemprop="name">vhikZhangchao</p>
+              <p class="site-description motion-element" itemprop="description">欢迎</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/Lanseria" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://twitter.com/Lanseria" target="_blank" title="Twitter">
+                    
+                      <i class="fa fa-fw fa-globe"></i>Twitter</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/lanseira" target="_blank" title="Weibo">
+                    
+                      <i class="fa fa-fw fa-globe"></i>Weibo</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://wpa.qq.com/msgrd?v=3&uin=564265135" target="_blank" title="QQ">
+                    
+                      <i class="fa fa-fw fa-globe"></i>QQ</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://douban.com/people/Lanseria" target="_blank" title="豆瓣">
+                    
+                      <i class="fa fa-fw fa-globe"></i>豆瓣</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.zhihu.com/people/Lanseria" target="_blank" title="知乎">
+                    
+                      <i class="fa fa-fw fa-globe"></i>知乎</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://aiterator.cn/" title="aiterator" target="_blank">aiterator</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#废话又扯多了，算法，咳咳"><span class="nav-number">2.</span> <span class="nav-text">废话又扯多了，算法，咳咳</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Javascript需要算法吗？"><span class="nav-number">3.</span> <span class="nav-text">Javascript需要算法吗？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#今天来讲什么的？我只能说小算法"><span class="nav-number">4.</span> <span class="nav-text">今天来讲什么的？我只能说小算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、数据结构"><span class="nav-number">4.1.</span> <span class="nav-text">一、数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-堆栈和队列"><span class="nav-number">4.1.1.</span> <span class="nav-text">1.堆栈和队列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、算法"><span class="nav-number">4.2.</span> <span class="nav-text">二、算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-尺取法"><span class="nav-number">4.2.1.</span> <span class="nav-text">1.尺取法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-例题：求最长子字符串"><span class="nav-number">4.2.1.1.</span> <span class="nav-text">1.例题：求最长子字符串</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">true</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
