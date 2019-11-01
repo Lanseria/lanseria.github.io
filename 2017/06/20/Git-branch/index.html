@@ -6,10 +6,10 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
 
 
@@ -27,8 +27,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
 
 
@@ -47,7 +47,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -55,9 +55,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="git,">
+  <meta name="keywords" content="git," />
 
 
 
@@ -86,27 +86,25 @@
 
 
 
-<meta name="description" content="本文大多数引用廖老师的教程–@git教程http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000   分支管理分支这个概念是很神奇的，你不仅可以用来开发，对我来说还可以用特别的软件观察出你的这个项目到底有多么宏伟（虽然现在只是空谈。。）">
+<meta name="description" content="本文大多数引用廖老师的教程–@git教程http:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;wiki&#x2F;0013739516305929606dd18361248578c67b8067c8c017b000   分支管理分支这个概念是很神奇的，你不仅可以用来开发，对我来说还可以用特别的软件观察出你的这个项目到底有多么宏伟（虽然现在只是空谈。。）">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git中的平行时空-分支Branch">
-<meta property="og:url" content="https://lanseria.github.com/2017/06/20/Git-branch/index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;lanseria.github.com&#x2F;2017&#x2F;06&#x2F;20&#x2F;Git-branch&#x2F;index.html">
 <meta property="og:site_name" content="Lanseria">
-<meta property="og:description" content="本文大多数引用廖老师的教程–@git教程http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000   分支管理分支这个概念是很神奇的，你不仅可以用来开发，对我来说还可以用特别的软件观察出你的这个项目到底有多么宏伟（虽然现在只是空谈。。）">
+<meta property="og:description" content="本文大多数引用廖老师的教程–@git教程http:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;wiki&#x2F;0013739516305929606dd18361248578c67b8067c8c017b000   分支管理分支这个概念是很神奇的，你不仅可以用来开发，对我来说还可以用特别的软件观察出你的这个项目到底有多么宏伟（虽然现在只是空谈。。）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://www.liaoxuefeng.com/files/attachments/001384908633976bb65b57548e64bf9be7253aebebd49af000/0">
-<meta property="og:image" content="http://www.liaoxuefeng.com/files/attachments/0013849087937492135fbf4bbd24dfcbc18349a8a59d36d000/0">
-<meta property="og:image" content="http://www.liaoxuefeng.com/files/attachments/001384908811773187a597e2d844eefb11f5cf5d56135ca000/0">
-<meta property="og:image" content="http://www.liaoxuefeng.com/files/attachments/0013849088235627813efe7649b4f008900e5365bb72323000/0">
-<meta property="og:image" content="http://www.liaoxuefeng.com/files/attachments/00138490883510324231a837e5d4aee844d3e4692ba50f5000/0">
-<meta property="og:image" content="http://www.liaoxuefeng.com/files/attachments/001384908867187c83ca970bf0f46efa19badad99c40235000/0">
-<meta property="og:image" content="http://www.liaoxuefeng.com/files/attachments/001384909115478645b93e2b5ae4dc78da049a0d1704a41000/0">
-<meta property="og:image" content="http://www.liaoxuefeng.com/files/attachments/00138490913052149c4b2cd9702422aa387ac024943921b000/0">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;files&#x2F;attachments&#x2F;001384908633976bb65b57548e64bf9be7253aebebd49af000&#x2F;0">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;files&#x2F;attachments&#x2F;0013849087937492135fbf4bbd24dfcbc18349a8a59d36d000&#x2F;0">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;files&#x2F;attachments&#x2F;001384908811773187a597e2d844eefb11f5cf5d56135ca000&#x2F;0">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;files&#x2F;attachments&#x2F;0013849088235627813efe7649b4f008900e5365bb72323000&#x2F;0">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;files&#x2F;attachments&#x2F;00138490883510324231a837e5d4aee844d3e4692ba50f5000&#x2F;0">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;files&#x2F;attachments&#x2F;001384908867187c83ca970bf0f46efa19badad99c40235000&#x2F;0">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;files&#x2F;attachments&#x2F;001384909115478645b93e2b5ae4dc78da049a0d1704a41000&#x2F;0">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;files&#x2F;attachments&#x2F;00138490913052149c4b2cd9702422aa387ac024943921b000&#x2F;0">
 <meta property="og:updated_time" content="2019-09-09T02:24:54.196Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git中的平行时空-分支Branch">
-<meta name="twitter:description" content="本文大多数引用廖老师的教程–@git教程http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000   分支管理分支这个概念是很神奇的，你不仅可以用来开发，对我来说还可以用特别的软件观察出你的这个项目到底有多么宏伟（虽然现在只是空谈。。）">
-<meta name="twitter:image" content="http://www.liaoxuefeng.com/files/attachments/001384908633976bb65b57548e64bf9be7253aebebd49af000/0">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;files&#x2F;attachments&#x2F;001384908633976bb65b57548e64bf9be7253aebebd49af000&#x2F;0">
 
 
 
@@ -136,7 +134,7 @@
 
 
 
-  <link rel="canonical" href="https://lanseria.github.com/2017/06/20/Git-branch/">
+  <link rel="canonical" href="https://lanseria.github.com/2017/06/20/Git-branch/"/>
 
 
 
@@ -179,7 +177,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
+      <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Lanseria</span>
         <span class="logo-line-after"><i></i></span>
@@ -207,9 +205,9 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -217,9 +215,9 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+          <a href="/about/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
           </a>
@@ -227,9 +225,9 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/tags/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -237,9 +235,9 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/categories/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
           </a>
@@ -247,9 +245,9 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/archives/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -259,10 +257,10 @@
       
         <li class="menu-item menu-item-search">
           
-            <a href="javascript:;" class="popup-trigger">
+            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
             搜索
           </a>
@@ -283,7 +281,9 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -324,7 +324,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="vhikZhangchao">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
@@ -360,7 +360,7 @@
           </span>
 
           
-            <span class="post-category">
+            <span class="post-category" >
             
               <span class="post-meta-divider">|</span>
             
@@ -372,7 +372,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
                     <span itemprop="name">技术</span>
                   </a>
                 </span>
@@ -414,7 +414,7 @@
 
 <h1 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h1><p>分支这个概念是很神奇的，你不仅可以用来开发，对我来说还可以用特别的软件观察出你的这个项目到底有多么宏伟（虽然现在只是空谈。。）<br> <a id="more"></a><br>分支就是科幻电影里面的平行宇宙，当你正在电脑前努力学习Git的时候，另一个你正在另一个平行宇宙里努力学习SVN。</p>
 <p>如果两个平行宇宙互不干扰，那对现在的你也没啥影响。不过，在某个时间点，两个平行宇宙合并了，结果，你既学会了Git又学会了SVN！</p>
-<img src="http://www.liaoxuefeng.com/files/attachments/001384908633976bb65b57548e64bf9be7253aebebd49af000/0" title="漫画">
+<img src="http://www.liaoxuefeng.com/files/attachments/001384908633976bb65b57548e64bf9be7253aebebd49af000/0" class="" title="漫画">
 
 <p>分支在实际中有什么用呢？假设你准备开发一个新功能，但是需要两周才能完成，第一周你写了50%的代码，如果立刻提交，由于代码还没写完，不完整的代码库会导致别人不能干活了。如果等代码全部写完再一次提交，又存在丢失每天进度的巨大风险。</p>
 <p>现在有了分支，就不用怕了。你创建了一个属于你自己的分支，别人看不到，还继续在原来的分支上正常工作，而你在自己的分支上干活，想提交就提交，直到开发完毕后，再一次性合并到原来的分支上，这样，既安全，又不影响别人工作。</p>
@@ -422,21 +422,21 @@
 <p>但Git的分支是与众不同的，无论创建、切换和删除分支，Git在1秒钟之内就能完成！无论你的版本库是1个文件还是1万个文件。</p>
 <h1 id="创建与合并分支"><a href="#创建与合并分支" class="headerlink" title="创建与合并分支"></a>创建与合并分支</h1><p>在重拾篇中，我们已经知道，每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即master分支。HEAD严格来说不是指向提交，而是指向master，master才是指向提交的，所以，HEAD指向的就是当前分支。</p>
 <p>一开始的时候，master分支是一条线，Git用master指向最新的提交，再用HEAD指向master，就能确定当前分支，以及当前分支的提交点：</p>
-<img src="http://www.liaoxuefeng.com/files/attachments/0013849087937492135fbf4bbd24dfcbc18349a8a59d36d000/0" title="HEAD与master的关系">
+<img src="http://www.liaoxuefeng.com/files/attachments/0013849087937492135fbf4bbd24dfcbc18349a8a59d36d000/0" class="" title="HEAD与master的关系">
 
 <p>每次提交，master分支都会向前移动一步，这样，随着你不断提交，master分支的线也越来越长，当我们创建新的分支，例如dev时，Git新建了一个指针叫dev，指向master相同的提交，再把HEAD指向dev，就表示当前分支在dev上：</p>
-<img src="http://www.liaoxuefeng.com/files/attachments/001384908811773187a597e2d844eefb11f5cf5d56135ca000/0" title="dev新分支">
+<img src="http://www.liaoxuefeng.com/files/attachments/001384908811773187a597e2d844eefb11f5cf5d56135ca000/0" class="" title="dev新分支">
 
 <p>你看，Git创建一个分支很快，因为除了增加一个dev指针，改改HEAD的指向，工作区的文件都没有任何变化！</p>
 <p>不过，从现在开始，对工作区的修改和提交就是针对dev分支了，比如新提交一次后，dev指针往前移动一步，而master指针不变：</p>
-<img src="http://www.liaoxuefeng.com/files/attachments/0013849088235627813efe7649b4f008900e5365bb72323000/0" title="HEAD指向dev">
+<img src="http://www.liaoxuefeng.com/files/attachments/0013849088235627813efe7649b4f008900e5365bb72323000/0" class="" title="HEAD指向dev">
 
 <p>假如我们在dev上的工作完成了，就可以把dev合并到master上。Git怎么合并呢？最简单的方法，就是直接把master指向dev的当前提交，就完成了合并：</p>
-<img src="http://www.liaoxuefeng.com/files/attachments/00138490883510324231a837e5d4aee844d3e4692ba50f5000/0" title="master追到dev">
+<img src="http://www.liaoxuefeng.com/files/attachments/00138490883510324231a837e5d4aee844d3e4692ba50f5000/0" class="" title="master追到dev">
 
 <p>所以Git合并分支也很快！就改改指针，工作区内容也不变！</p>
 <p>合并完分支后，甚至可以删除dev分支。删除dev分支就是把dev指针给删掉，删掉后，我们就剩下了一条master分支：</p>
-<img src="http://www.liaoxuefeng.com/files/attachments/001384908867187c83ca970bf0f46efa19badad99c40235000/0" title="删除了dev分支">
+<img src="http://www.liaoxuefeng.com/files/attachments/001384908867187c83ca970bf0f46efa19badad99c40235000/0" class="" title="删除了dev分支">
 
 <h1 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h1><p>人生不如意之事十之八九，合并分支往往也不是一帆风顺的。</p>
 <p>准备新的feature1分支，继续我们的新分支开发：</p>
@@ -456,13 +456,11 @@
 <p>提交：</p>
 <blockquote><p>$ git add readme.txt<br>$ git commit -m “&amp; simple”<br>[master 400b400] &amp; simple<br> 1 file changed, 1 insertion(+), 1 deletion(-)</p>
 </blockquote>
-<p> 现在，master分支和feature1分支各自都分别有新的提交，变成了这样：<br> <img src="http://www.liaoxuefeng.com/files/attachments/001384909115478645b93e2b5ae4dc78da049a0d1704a41000/0" title="feature1与master"><br> 这种情况下，Git无法执行“快速合并”，只能试图把各自的修改合并起来，但这种合并就可能会有冲突，我们试试看：<br> <blockquote><p> $ git merge feature1<br>Auto-merging readme.txt<br>CONFLICT (content): Merge conflict in readme.txt<br>Automatic merge failed; fix conflicts and then commit the result.</p>
+<p> 现在，master分支和feature1分支各自都分别有新的提交，变成了这样：<br> <img src="http://www.liaoxuefeng.com/files/attachments/001384909115478645b93e2b5ae4dc78da049a0d1704a41000/0" class="" title="feature1与master"><br> 这种情况下，Git无法执行“快速合并”，只能试图把各自的修改合并起来，但这种合并就可能会有冲突，我们试试看：<br> <blockquote><p> $ git merge feature1<br>Auto-merging readme.txt<br>CONFLICT (content): Merge conflict in readme.txt<br>Automatic merge failed; fix conflicts and then commit the result.</p>
 </blockquote><br>果然冲突了！Git告诉我们，readme.txt文件存在冲突，必须手动解决冲突后再提交。git status也可以告诉我们冲突的文件：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line"># On branch master</span><br><span class="line"># Your branch is ahead of &apos;origin/master&apos; by 2 commits.</span><br><span class="line">#</span><br><span class="line"># Unmerged paths:</span><br><span class="line">#   (use &quot;git add/rm &lt;file&gt;...&quot; as appropriate to mark resolution)</span><br><span class="line">#</span><br><span class="line">#       both modified:      readme.txt</span><br><span class="line">#</span><br><span class="line">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span><br></pre></td></tr></table></figure>
-
 <p>我们可以直接查看readme.txt的内容：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Git is a distributed version control system.</span><br><span class="line">Git is free software distributed under the GPL.</span><br><span class="line">Git has a mutable index called stage.</span><br><span class="line">Git tracks changes of files.</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">Creating a new branch is quick &amp; simple.</span><br><span class="line">=======</span><br><span class="line">Creating a new branch is quick AND simple.</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature1</span><br></pre></td></tr></table></figure>
-
 <p>Git用&lt;&lt;&lt;&lt;&lt;&lt;&lt;，=======，&gt;&gt;&gt;&gt;&gt;&gt;&gt;标记出不同分支的内容，我们修改如下后保存：</p>
 <blockquote><p>Creating a new branch is quick and simple.</p>
 </blockquote>
@@ -470,10 +468,9 @@
 <blockquote><p>$ git add readme.txt<br>$ git commit -m “conflict fixed”<br>[master 59bc1cb] conflict fixed</p>
 </blockquote>
 <p>现在，master分支和feature1分支变成了下图所示：</p>
-<img src="http://www.liaoxuefeng.com/files/attachments/00138490913052149c4b2cd9702422aa387ac024943921b000/0" title="处理完问题后">
+<img src="http://www.liaoxuefeng.com/files/attachments/00138490913052149c4b2cd9702422aa387ac024943921b000/0" class="" title="处理完问题后">
 <p>用带参数的git log也可以看到分支的合并情况：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">*   2671404 conflict fixed</span><br><span class="line">|\</span><br><span class="line">| * 791d353 AND simple</span><br><span class="line">* | 68c7116 &amp; simple</span><br><span class="line">|/</span><br><span class="line">* 2605498 branch test</span><br><span class="line">* 8dc924a add test.txt</span><br><span class="line">* 17f0247 add of files</span><br><span class="line">* 381cacb git tracks changes</span><br><span class="line">* 7e2984e learn git stage is important</span><br><span class="line">* 4db1f01 append GPL</span><br><span class="line">* 7c17cad add distributed</span><br><span class="line">* bb08438 wrote a readme file</span><br></pre></td></tr></table></figure>
-
 <p>最后，删除feature1分支：</p>
 <blockquote><p>$ git branch -d feature1<br>Deleted branch feature1 (was 75a857c).</p>
 </blockquote>
@@ -506,7 +503,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/18/Git远程仓库/" rel="next" title="Git远程仓库">
+              <a href="/2017/06/18/Git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" rel="next" title="Git远程仓库">
                 <i class="fa fa-chevron-left"></i> Git远程仓库
               </a>
             
@@ -516,7 +513,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/06/21/学习jQuery源代码之一-模块与对象的构造/" rel="prev" title="学习jQuery源代码之一>>模块与对象的构造">
+              <a href="/2017/06/21/%E5%AD%A6%E4%B9%A0jQuery%E6%BA%90%E4%BB%A3%E7%A0%81%E4%B9%8B%E4%B8%80-%E6%A8%A1%E5%9D%97%E4%B8%8E%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%9E%84%E9%80%A0/" rel="prev" title="学习jQuery源代码之一>>模块与对象的构造">
                 学习jQuery源代码之一>>模块与对象的构造 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -589,7 +586,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="vhikZhangchao">
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="vhikZhangchao" />
             
               <p class="site-author-name" itemprop="name">vhikZhangchao</p>
               <p class="site-description motion-element" itemprop="description">欢迎</p>
@@ -600,9 +599,9 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -613,7 +612,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -624,7 +623,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -844,7 +843,7 @@
 
   
   
-    <script id="ribbon" type="text/javascript" size="300" alpha="0.6" zindex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
   
 
 

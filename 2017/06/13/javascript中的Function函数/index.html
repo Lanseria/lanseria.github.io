@@ -6,10 +6,10 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
 
 
@@ -27,8 +27,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
 
 
@@ -47,7 +47,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -55,9 +55,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="javascript,前端,柯里化,currying,">
+  <meta name="keywords" content="javascript,前端,柯里化,currying," />
 
 
 
@@ -86,24 +86,22 @@
 
 
 
-<meta name="description" content="本文引用的部分链接https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript#内部函数https://stackoverflow.com/questions/111102/how-do-javascript-closures-workhttps://translate.google.">
+<meta name="description" content="本文引用的部分链接https:&#x2F;&#x2F;developer.mozilla.org&#x2F;zh-CN&#x2F;docs&#x2F;Web&#x2F;JavaScript&#x2F;A_re-introduction_to_JavaScript#内部函数https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;111102&#x2F;how-do-javascript-closures-workhttps:&#x2F;&#x2F;translate.google.">
 <meta name="keywords" content="javascript,前端,柯里化,currying">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javascript 中的 Function 函数">
-<meta property="og:url" content="https://lanseria.github.com/2017/06/13/javascript中的Function函数/index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;lanseria.github.com&#x2F;2017&#x2F;06&#x2F;13&#x2F;javascript%E4%B8%AD%E7%9A%84Function%E5%87%BD%E6%95%B0&#x2F;index.html">
 <meta property="og:site_name" content="Lanseria">
-<meta property="og:description" content="本文引用的部分链接https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript#内部函数https://stackoverflow.com/questions/111102/how-do-javascript-closures-workhttps://translate.google.">
+<meta property="og:description" content="本文引用的部分链接https:&#x2F;&#x2F;developer.mozilla.org&#x2F;zh-CN&#x2F;docs&#x2F;Web&#x2F;JavaScript&#x2F;A_re-introduction_to_JavaScript#内部函数https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;111102&#x2F;how-do-javascript-closures-workhttps:&#x2F;&#x2F;translate.google.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://mdn.mozillademos.org/files/13883/person-diagram.png">
-<meta property="og:image" content="https://mdn.mozillademos.org/files/13883/MDN-Graphics-instantiation-2.png">
-<meta property="og:image" content="https://mdn.mozillademos.org/files/13881/MDN-Graphics-inherited-3.png">
-<meta property="og:image" content="https://mdn.mozillademos.org/files/13885/MDN-Graphics-instantiation-teacher-3.png">
-<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2017/bg2017030903.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;mdn.mozillademos.org&#x2F;files&#x2F;13883&#x2F;person-diagram.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;mdn.mozillademos.org&#x2F;files&#x2F;13883&#x2F;MDN-Graphics-instantiation-2.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;mdn.mozillademos.org&#x2F;files&#x2F;13881&#x2F;MDN-Graphics-inherited-3.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;mdn.mozillademos.org&#x2F;files&#x2F;13885&#x2F;MDN-Graphics-instantiation-teacher-3.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.ruanyifeng.com&#x2F;blogimg&#x2F;asset&#x2F;2017&#x2F;bg2017030903.jpg">
 <meta property="og:updated_time" content="2019-09-09T02:24:54.190Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Javascript 中的 Function 函数">
-<meta name="twitter:description" content="本文引用的部分链接https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript#内部函数https://stackoverflow.com/questions/111102/how-do-javascript-closures-workhttps://translate.google.">
-<meta name="twitter:image" content="https://mdn.mozillademos.org/files/13883/person-diagram.png">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;mdn.mozillademos.org&#x2F;files&#x2F;13883&#x2F;person-diagram.png">
 
 
 
@@ -133,7 +131,7 @@
 
 
 
-  <link rel="canonical" href="https://lanseria.github.com/2017/06/13/javascript中的Function函数/">
+  <link rel="canonical" href="https://lanseria.github.com/2017/06/13/javascript中的Function函数/"/>
 
 
 
@@ -176,7 +174,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
+      <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Lanseria</span>
         <span class="logo-line-after"><i></i></span>
@@ -204,9 +202,9 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -214,9 +212,9 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+          <a href="/about/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
           </a>
@@ -224,9 +222,9 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/tags/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -234,9 +232,9 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/categories/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
           </a>
@@ -244,9 +242,9 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/archives/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -256,10 +254,10 @@
       
         <li class="menu-item menu-item-search">
           
-            <a href="javascript:;" class="popup-trigger">
+            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
             搜索
           </a>
@@ -280,7 +278,9 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -317,11 +317,11 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lanseria.github.com/2017/06/13/javascript中的Function函数/">
+    <link itemprop="mainEntityOfPage" href="https://lanseria.github.com/2017/06/13/javascript%E4%B8%AD%E7%9A%84Function%E5%87%BD%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="vhikZhangchao">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
@@ -357,7 +357,7 @@
           </span>
 
           
-            <span class="post-category">
+            <span class="post-category" >
             
               <span class="post-meta-divider">|</span>
             
@@ -369,7 +369,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
                     <span itemprop="name">技术</span>
                   </a>
                 </span>
@@ -380,7 +380,7 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/面试/" itemprop="url" rel="index">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/%E9%9D%A2%E8%AF%95/" itemprop="url" rel="index">
                     <span itemprop="name">面试</span>
                   </a>
                 </span>
@@ -437,21 +437,21 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">  name : [<span class="string">'Bob'</span>, <span class="string">'Smith'</span>],</span><br><span class="line">  age : <span class="number">32</span>,</span><br><span class="line">  gender : <span class="string">'male'</span>,</span><br><span class="line">  interests : [<span class="string">'music'</span>, <span class="string">'skiing'</span>],</span><br><span class="line">  bio : <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="keyword">this</span>.name[<span class="number">0</span>] + <span class="string">' '</span> + <span class="keyword">this</span>.name[<span class="number">1</span>] + <span class="string">' is '</span> + <span class="keyword">this</span>.age + <span class="string">' years old. He likes '</span> + <span class="keyword">this</span>.interests[<span class="number">0</span>] + <span class="string">' and '</span> + <span class="keyword">this</span>.interests[<span class="number">1</span>] + <span class="string">'.'</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">  greeting: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">'Hi! I\'m '</span> + <span class="keyword">this</span>.name[<span class="number">0</span>] + <span class="string">'.'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <p>其实，js中几乎什么都是一个对象，比如</p>
-<img src="https://mdn.mozillademos.org/files/13883/person-diagram.png" title="一个简单的对象类">
+<img src="https://mdn.mozillademos.org/files/13883/person-diagram.png" class="" title="一个简单的对象类">
 
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">myString.split(<span class="string">','</span>);</span><br></pre></td></tr></table></figure>
 
 <p>myString继承了String的split方法<br>还有写DOM的对象这里就不详细地往下讲了</p>
 <p>这里讲完对象就不得不讲讲对象中类，类不是js独创，不过在许多语言都用class这个概念，在php，java，c++，c#等等都可以看到<br>class的使用<br>其实就是为了继承，比如</p>
-<img src="https://mdn.mozillademos.org/files/13883/MDN-Graphics-instantiation-2.png" title="类对象">
+<img src="https://mdn.mozillademos.org/files/13883/MDN-Graphics-instantiation-2.png" class="" title="类对象">
 
 <p>一个Person 类<br>在一个Person的基础上你不仅可以创造一个名为王小波的一个具体人的对象<br>你甚至可以继承Person类去创建一个新的，属于某个更加具体的类，比如老师Teacher()类<br>Student()类</p>
-<img src="https://mdn.mozillademos.org/files/13881/MDN-Graphics-inherited-3.png" title="类继承">
+<img src="https://mdn.mozillademos.org/files/13881/MDN-Graphics-inherited-3.png" class="" title="类继承">
 <p>其中属性的继承或者方法的重写都是一种很好的代码循环利用，在程序猿的世界，这叫做防止代码冗余，易于别人或自己看懂代码</p>
 <p>对象的构造初始化</p>
 <p>类的继承</p>
 <p>类继承后可以继续创造相应的对象</p>
-<img src="https://mdn.mozillademos.org/files/13885/MDN-Graphics-instantiation-teacher-3.png" title="继承后再次对象">
+<img src="https://mdn.mozillademos.org/files/13885/MDN-Graphics-instantiation-teacher-3.png" class="" title="继承后再次对象">
 <p>不过在Js是如何处理这类OOP理论的问题呢<br>引用MDN中的一句话，</p>
 <blockquote><p>Some people argue that JavaScript is not a true object-oriented language — for example it doesn’t have a class statement for creating classes like many OO languages. JavaScript instead uses special functions called constructor functions to define objects and their features. They are useful because you’ll often come across situations in which you don’t know how many objects you will be creating; constructors provide the means to create as many objects as you need in an effective way, attaching data and functions to them as required.</p>
 <p>来自 <a href="https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_JS" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_JS</a> </p>
@@ -492,9 +492,9 @@
           
             <a href="/tags/javascript/" rel="tag"># javascript</a>
           
-            <a href="/tags/前端/" rel="tag"># 前端</a>
+            <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"># 前端</a>
           
-            <a href="/tags/柯里化/" rel="tag"># 柯里化</a>
+            <a href="/tags/%E6%9F%AF%E9%87%8C%E5%8C%96/" rel="tag"># 柯里化</a>
           
             <a href="/tags/currying/" rel="tag"># currying</a>
           
@@ -509,7 +509,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/08/我对自己的一些认知/" rel="next" title="我对自己的一些认知">
+              <a href="/2017/04/08/%E6%88%91%E5%AF%B9%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%A4%E7%9F%A5/" rel="next" title="我对自己的一些认知">
                 <i class="fa fa-chevron-left"></i> 我对自己的一些认知
               </a>
             
@@ -519,7 +519,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/06/17/git重拾篇/" rel="prev" title="Git 重拾篇">
+              <a href="/2017/06/17/git%E9%87%8D%E6%8B%BE%E7%AF%87/" rel="prev" title="Git 重拾篇">
                 Git 重拾篇 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -592,7 +592,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="vhikZhangchao">
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="vhikZhangchao" />
             
               <p class="site-author-name" itemprop="name">vhikZhangchao</p>
               <p class="site-description motion-element" itemprop="description">欢迎</p>
@@ -603,9 +605,9 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -616,7 +618,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -627,7 +629,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -847,7 +849,7 @@
 
   
   
-    <script id="ribbon" type="text/javascript" size="300" alpha="0.6" zindex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
   
 
 

@@ -6,10 +6,10 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
 
 
@@ -27,8 +27,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
 
 
@@ -47,7 +47,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -55,9 +55,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="CSS,transition,动画,">
+  <meta name="keywords" content="CSS,transition,动画," />
 
 
 
@@ -90,20 +90,18 @@
 <meta name="keywords" content="CSS,transition,动画">
 <meta property="og:type" content="article">
 <meta property="og:title" content="single-transition-timing-function-单个过渡式时序函数">
-<meta property="og:url" content="https://lanseria.github.com/2017/11/06/single-transition-timing-function-单个过渡式时序函数/index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;lanseria.github.com&#x2F;2017&#x2F;11&#x2F;06&#x2F;single-transition-timing-function-%E5%8D%95%E4%B8%AA%E8%BF%87%E6%B8%A1%E5%BC%8F%E6%97%B6%E5%BA%8F%E5%87%BD%E6%95%B0&#x2F;index.html">
 <meta property="og:site_name" content="Lanseria">
 <meta property="og:description" content="引用英译  这个单调式时序过渡函数是一种 CSS 数据类型，用于表示在整个一维动画期间，相应的值变化多快的数学函数。可以让你在整个持续时间内通过建立各种不同的数学函数来控制数值的速度。 “平滑”定时功能通常被称为 easing 函数。 他们将时间比率与输出比率相关联，均表示为。 对于这些值，0.0代表初始状态，1.0代表最终状态。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://developer.mozilla.org/files/3434/TF_with_output_gt_than_1.png">
-<meta property="og:image" content="https://developer.mozilla.org/files/3435/TF_with_output_gt_than_1_clipped.png">
-<meta property="og:image" content="https://developer.mozilla.org/files/3433/cubic-bezier,%20example.png">
-<meta property="og:image" content="https://developer.mozilla.org/files/3436/steps(2,start).png">
-<meta property="og:image" content="https://developer.mozilla.org/files/3437/steps(4,end).png">
+<meta property="og:image" content="https:&#x2F;&#x2F;developer.mozilla.org&#x2F;files&#x2F;3434&#x2F;TF_with_output_gt_than_1.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;developer.mozilla.org&#x2F;files&#x2F;3435&#x2F;TF_with_output_gt_than_1_clipped.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;developer.mozilla.org&#x2F;files&#x2F;3433&#x2F;cubic-bezier,%20example.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;developer.mozilla.org&#x2F;files&#x2F;3436&#x2F;steps(2,start).png">
+<meta property="og:image" content="https:&#x2F;&#x2F;developer.mozilla.org&#x2F;files&#x2F;3437&#x2F;steps(4,end).png">
 <meta property="og:updated_time" content="2019-09-09T02:24:54.214Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="single-transition-timing-function-单个过渡式时序函数">
-<meta name="twitter:description" content="引用英译  这个单调式时序过渡函数是一种 CSS 数据类型，用于表示在整个一维动画期间，相应的值变化多快的数学函数。可以让你在整个持续时间内通过建立各种不同的数学函数来控制数值的速度。 “平滑”定时功能通常被称为 easing 函数。 他们将时间比率与输出比率相关联，均表示为。 对于这些值，0.0代表初始状态，1.0代表最终状态。">
-<meta name="twitter:image" content="https://developer.mozilla.org/files/3434/TF_with_output_gt_than_1.png">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;developer.mozilla.org&#x2F;files&#x2F;3434&#x2F;TF_with_output_gt_than_1.png">
 
 
 
@@ -133,7 +131,7 @@
 
 
 
-  <link rel="canonical" href="https://lanseria.github.com/2017/11/06/single-transition-timing-function-单个过渡式时序函数/">
+  <link rel="canonical" href="https://lanseria.github.com/2017/11/06/single-transition-timing-function-单个过渡式时序函数/"/>
 
 
 
@@ -176,7 +174,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
+      <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Lanseria</span>
         <span class="logo-line-after"><i></i></span>
@@ -204,9 +202,9 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -214,9 +212,9 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+          <a href="/about/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
           </a>
@@ -224,9 +222,9 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/tags/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -234,9 +232,9 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/categories/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
           </a>
@@ -244,9 +242,9 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/archives/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -256,10 +254,10 @@
       
         <li class="menu-item menu-item-search">
           
-            <a href="javascript:;" class="popup-trigger">
+            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
             搜索
           </a>
@@ -280,7 +278,9 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -317,11 +317,11 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lanseria.github.com/2017/11/06/single-transition-timing-function-单个过渡式时序函数/">
+    <link itemprop="mainEntityOfPage" href="https://lanseria.github.com/2017/11/06/single-transition-timing-function-%E5%8D%95%E4%B8%AA%E8%BF%87%E6%B8%A1%E5%BC%8F%E6%97%B6%E5%BA%8F%E5%87%BD%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="vhikZhangchao">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
@@ -357,7 +357,7 @@
           </span>
 
           
-            <span class="post-category">
+            <span class="post-category" >
             
               <span class="post-meta-divider">|</span>
             
@@ -369,7 +369,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
                     <span itemprop="name">技术</span>
                   </a>
                 </span>
@@ -407,18 +407,18 @@
 
       
         <blockquote>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/single-transition-timing-function" target="_blank" rel="noopener">引用英译<single-transition-timing-function></single-transition-timing-function></a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/single-transition-timing-function" target="_blank" rel="noopener">引用英译<single-transition-timing-function></a></p>
 </blockquote>
 <p>这个单调式时序过渡函数是一种 CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Types" target="_blank" rel="noopener">数据类型</a>，用于表示在整个一维动画期间，相应的值变化多快的数学函数。可以让你在整个持续时间内通过建立各种不同的数学函数来控制数值的速度。</p>
-<p>“平滑”定时功能通常被称为 easing 函数。 他们将时间比率与输出比率相关联，均表示为<number>。 对于这些值，0.0代表初始状态，1.0代表最终状态。</number></p>
+<p>“平滑”定时功能通常被称为 easing 函数。 他们将时间比率与输出比率相关联，均表示为<Number>。 对于这些值，0.0代表初始状态，1.0代表最终状态。</p>
 <a id="more"></a>
-<img src="https://developer.mozilla.org/files/3434/TF_with_output_gt_than_1.png">
-<img src="https://developer.mozilla.org/files/3435/TF_with_output_gt_than_1_clipped.png">
+<img src="https://developer.mozilla.org/files/3434/TF_with_output_gt_than_1.png" class="">
+<img src="https://developer.mozilla.org/files/3435/TF_with_output_gt_than_1_clipped.png" class="">
 
 <p>根据所使用的具体功能，在动画过程中，计算的输出有时可能会增大到大于1.0或小于0.0。 这会导致动画比最终状态更远，然后返回。 对于某些属性，如左或右，这会产生一种“弹跳”效果。</p>
 <p>但是，某些属性会超出允许的范围限制输出。 例如，大于255或小于0的颜色分量将被剪裁到最接近的允许值（分别为255和0）。 一些 cubic-bezier()  曲线显示此属性。</p>
 <h1 id="Timing-functions"><a href="#Timing-functions" class="headerlink" title="Timing functions"></a>Timing functions</h1><p>CSS支持两种定时功能：作为函数的三次贝塞尔曲线的子集，以及阶梯函数。 这些函数中最有用的是给出一个关键字，使他们可以很容易地引用。</p>
-<h2 id="The-cubic-bezier-class-of-timing-functions"><a href="#The-cubic-bezier-class-of-timing-functions" class="headerlink" title="The cubic-bezier() class of timing functions"></a>The cubic-bezier() class of timing functions</h2><img src="https://developer.mozilla.org/files/3433/cubic-bezier,%20example.png">
+<h2 id="The-cubic-bezier-class-of-timing-functions"><a href="#The-cubic-bezier-class-of-timing-functions" class="headerlink" title="The cubic-bezier() class of timing functions"></a>The cubic-bezier() class of timing functions</h2><img src="https://developer.mozilla.org/files/3433/cubic-bezier,%20example.png" class="">
 
 <p>cubic-bezier() 函数表示法定义了一个三次贝塞尔曲线。 如这些曲线是连续的，它们通常用于平滑向下的开始和动画的端，因此有时被称为缓和功能。</p>
 <p>三次贝塞尔曲线由四个点P0，P1，P2和P3限定。 P0和P3是曲线的开始和结束，在CSS中，这些点是固定的，因为坐标是比率（横坐标是时间的比率，纵坐标是输出范围的比率）。 P0为（0,0），表示初始时间和初始状态，P3为（1,1），表示最终时间和最终状态。</p>
@@ -429,7 +429,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cubic-bezier(x1, y1, x2, y2)</span><br></pre></td></tr></table></figure>
 
 <p><strong>x1, y1, x2, y2</strong></p>
-<p><number>值代表横坐标，P1和P2点的纵坐标定义三次Bézier曲线。 x1和x2必须在[0，1]范围内，否则该值无效。</number></p>
+<p><number>值代表横坐标，P1和P2点的纵坐标定义三次Bézier曲线。 x1和x2必须在[0，1]范围内，否则该值无效。</p>
 <h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><p>These cubic Bézier curves are valid for use in CSS :</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* The canonical Bézier curve with four &lt;number&gt; in the [0,1] range. */</span></span><br><span class="line">cubic-bezier(<span class="number">0.1</span>, <span class="number">0.7</span>, <span class="number">1.0</span>, <span class="number">0.1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Using &lt;integer&gt; is valid as any &lt;integer&gt; is also a &lt;number&gt;. */</span></span><br><span class="line">cubic-bezier(<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Negative values for ordinates are valid, leading to bouncing effects.*/</span></span><br><span class="line">cubic-bezier(<span class="number">0.1</span>, <span class="number">-0.6</span>, <span class="number">0.2</span>, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Values &gt; 1.0 for ordinates are also valid. */</span></span><br><span class="line">cubic-bezier(<span class="number">0</span>, <span class="number">1.1</span>, <span class="number">0.8</span>, <span class="number">4</span>)</span><br></pre></td></tr></table></figure>
 
@@ -437,9 +437,9 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Though the animated output type may be a color, </span></span><br><span class="line"><span class="comment">   Bézier curves work w/ numerical ratios.*/</span></span><br><span class="line">cubic-bezier(<span class="number">0.1</span>, red, <span class="number">1.0</span>, green)</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Abscissas must be in the [0, 1] range or </span></span><br><span class="line"><span class="comment">   the curve is not a function of time. */</span></span><br><span class="line">cubic-bezier(<span class="number">2.45</span>, <span class="number">0.6</span>, <span class="number">4</span>, <span class="number">0.1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">/* The two points must be defined, there is no default value. */</span></span><br><span class="line">cubic-bezier(<span class="number">0.3</span>, <span class="number">2.1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Abscissas must be in the [0, 1] range or </span></span><br><span class="line"><span class="comment">   the curve is not a function of time. */</span></span><br><span class="line">cubic-bezier(<span class="number">-1.9</span>, <span class="number">0.3</span>, <span class="number">-0.2</span>, <span class="number">2.1</span>)</span><br></pre></td></tr></table></figure>
 
 <h2 id="The-steps-class-of-timing-functions"><a href="#The-steps-class-of-timing-functions" class="headerlink" title="The steps() class of timing functions"></a>The steps() class of timing functions</h2><p>steps() 函数表示法定义了一个step函数，以等距离的步骤分割输出值的域。这个阶梯函数的子类有时也被称为阶梯函数。</p>
-<img src="https://developer.mozilla.org/files/3436/steps(2,start).png" title="steps(2, start)">
+<img src="https://developer.mozilla.org/files/3436/steps(2,start).png" class="" title="steps(2, start)">
 
-<img src="https://developer.mozilla.org/files/3437/steps(4,end).png" title="steps(4, end)">
+<img src="https://developer.mozilla.org/files/3437/steps(4,end).png" class="" title="steps(4, end)">
 
 <p><strong>Syntax</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">steps(number_of_steps, direction)</span><br></pre></td></tr></table></figure>
@@ -454,7 +454,6 @@
 
 <p>These timing function are invalid :</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* The first parameter must be an &lt;integer&gt; and </span></span><br><span class="line"><span class="comment">   cannot be a real value, even if it is equal to one. */</span></span><br><span class="line">steps(<span class="number">2.0</span>, end)</span><br><span class="line"></span><br><span class="line"><span class="comment">/* The amount of steps must be non-negative. */</span></span><br><span class="line">steps(<span class="number">-3</span>, start)</span><br><span class="line"></span><br><span class="line"><span class="comment">/* There must be at least one step.*/</span></span><br><span class="line">steps(<span class="number">0</span>, end)</span><br></pre></td></tr></table></figure>
-
 
       
     </div>
@@ -476,7 +475,7 @@
           
             <a href="/tags/transition/" rel="tag"># transition</a>
           
-            <a href="/tags/动画/" rel="tag"># 动画</a>
+            <a href="/tags/%E5%8A%A8%E7%94%BB/" rel="tag"># 动画</a>
           
         </div>
       
@@ -489,7 +488,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/23/前端路一步步走，重新再来/" rel="next" title="前端路一步步走，重新再来">
+              <a href="/2017/10/23/%E5%89%8D%E7%AB%AF%E8%B7%AF%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%B5%B0%EF%BC%8C%E9%87%8D%E6%96%B0%E5%86%8D%E6%9D%A5/" rel="next" title="前端路一步步走，重新再来">
                 <i class="fa fa-chevron-left"></i> 前端路一步步走，重新再来
               </a>
             
@@ -499,7 +498,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/13/一直在督促别人学习，但知道这是无用功。直到他们走到这一步/" rel="prev" title="一直在督促别人学习，但知道这是无用功。直到他们走到这一步">
+              <a href="/2017/12/13/%E4%B8%80%E7%9B%B4%E5%9C%A8%E7%9D%A3%E4%BF%83%E5%88%AB%E4%BA%BA%E5%AD%A6%E4%B9%A0%EF%BC%8C%E4%BD%86%E7%9F%A5%E9%81%93%E8%BF%99%E6%98%AF%E6%97%A0%E7%94%A8%E5%8A%9F%E3%80%82%E7%9B%B4%E5%88%B0%E4%BB%96%E4%BB%AC%E8%B5%B0%E5%88%B0%E8%BF%99%E4%B8%80%E6%AD%A5/" rel="prev" title="一直在督促别人学习，但知道这是无用功。直到他们走到这一步">
                 一直在督促别人学习，但知道这是无用功。直到他们走到这一步 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -572,7 +571,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="vhikZhangchao">
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="vhikZhangchao" />
             
               <p class="site-author-name" itemprop="name">vhikZhangchao</p>
               <p class="site-description motion-element" itemprop="description">欢迎</p>
@@ -583,9 +584,9 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -596,7 +597,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -607,7 +608,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -827,7 +828,7 @@
 
   
   
-    <script id="ribbon" type="text/javascript" size="300" alpha="0.6" zindex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
   
 
 

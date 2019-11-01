@@ -6,10 +6,10 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
 
 
@@ -27,8 +27,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
 
 
@@ -47,7 +47,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -55,9 +55,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="git,ssh,hole,">
+  <meta name="keywords" content="git,ssh,hole," />
 
 
 
@@ -90,17 +90,15 @@
 <meta name="keywords" content="git,ssh,hole">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git 与远程仓库(Remote)的那些事(坑)">
-<meta property="og:url" content="https://lanseria.github.com/2017/10/13/Git-与远程仓库-Remote-的那些事-坑/index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;lanseria.github.com&#x2F;2017&#x2F;10&#x2F;13&#x2F;Git-%E4%B8%8E%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93-Remote-%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B-%E5%9D%91&#x2F;index.html">
 <meta property="og:site_name" content="Lanseria">
 <meta property="og:description" content="参考：（无）  前言好久没有更新博客了，自上次9月25日更新了一些数据结构的笔记以后，去忙别的事情了，原因的话，应该都懂。工作啦，还是学习，买手机等等，总之还是在规划自己的学习路线，时刻更新下，毕竟计划赶不上变化。突然写这篇文章的原因有很多，有惠阳学弟向我要一些文章博客，还要我的博客…我就突然想起来了（我他妈博客几年没更新了，在我脑中），还有就是最近项目都有用到 Git 这个版本管理工具，虽然之">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://lanseria.github.com/img/2017-10-13-1.png">
-<meta property="og:image" content="https://lanseria.github.com/img/2017-10-13-2.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;lanseria.github.com&#x2F;img&#x2F;2017-10-13-1.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;lanseria.github.com&#x2F;img&#x2F;2017-10-13-2.png">
 <meta property="og:updated_time" content="2019-09-09T02:24:54.210Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git 与远程仓库(Remote)的那些事(坑)">
-<meta name="twitter:description" content="参考：（无）  前言好久没有更新博客了，自上次9月25日更新了一些数据结构的笔记以后，去忙别的事情了，原因的话，应该都懂。工作啦，还是学习，买手机等等，总之还是在规划自己的学习路线，时刻更新下，毕竟计划赶不上变化。突然写这篇文章的原因有很多，有惠阳学弟向我要一些文章博客，还要我的博客…我就突然想起来了（我他妈博客几年没更新了，在我脑中），还有就是最近项目都有用到 Git 这个版本管理工具，虽然之">
-<meta name="twitter:image" content="https://lanseria.github.com/img/2017-10-13-1.png">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;lanseria.github.com&#x2F;img&#x2F;2017-10-13-1.png">
 
 
 
@@ -130,7 +128,7 @@
 
 
 
-  <link rel="canonical" href="https://lanseria.github.com/2017/10/13/Git-与远程仓库-Remote-的那些事-坑/">
+  <link rel="canonical" href="https://lanseria.github.com/2017/10/13/Git-与远程仓库-Remote-的那些事-坑/"/>
 
 
 
@@ -173,7 +171,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
+      <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Lanseria</span>
         <span class="logo-line-after"><i></i></span>
@@ -201,9 +199,9 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -211,9 +209,9 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+          <a href="/about/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
           </a>
@@ -221,9 +219,9 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/tags/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -231,9 +229,9 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/categories/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
           </a>
@@ -241,9 +239,9 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/archives/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -253,10 +251,10 @@
       
         <li class="menu-item menu-item-search">
           
-            <a href="javascript:;" class="popup-trigger">
+            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
             搜索
           </a>
@@ -277,7 +275,9 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -314,11 +314,11 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lanseria.github.com/2017/10/13/Git-与远程仓库-Remote-的那些事-坑/">
+    <link itemprop="mainEntityOfPage" href="https://lanseria.github.com/2017/10/13/Git-%E4%B8%8E%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93-Remote-%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B-%E5%9D%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="vhikZhangchao">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
@@ -354,7 +354,7 @@
           </span>
 
           
-            <span class="post-category">
+            <span class="post-category" >
             
               <span class="post-meta-divider">|</span>
             
@@ -366,7 +366,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
                     <span itemprop="name">技术</span>
                   </a>
                 </span>
@@ -413,29 +413,24 @@
 <li>多远程仓库的管理与配置</li>
 <li>一个巨大的坑（详细介绍）</li>
 </ul>
-<h1 id="怎么将本地库与远程库关联"><a href="#怎么将本地库与远程库关联" class="headerlink" title="怎么将本地库与远程库关联"></a>怎么将本地库与远程库关联</h1><img src="/img/2017-10-13-1.png" title="图1">
+<h1 id="怎么将本地库与远程库关联"><a href="#怎么将本地库与远程库关联" class="headerlink" title="怎么将本地库与远程库关联"></a>怎么将本地库与远程库关联</h1><img src="/img/2017-10-13-1.png" class="" title="图1">
 <p>其实 <code>图1</code> 已经给出明确的答案了，如果需要详细的网页可以<a href="https://github.com/Lanseria/e" target="_blank" rel="noopener">点击这里</a><br>这张图中第二部分就是给出的是，如果你已经先在本地有 <code>Git</code> 仓库了，<br>当然注意，这个仓库一定是已经 <code>git init</code> 过的，或者说是 <code>git clone</code> 过的，不能你自己以为就是以为。<br>然后，执行这句命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com:[yourusername]/[repo].git</span><br></pre></td></tr></table></figure>
-
 <p><code>yourusername</code> 是你在github或者其它刚刚建立的远程仓库的使用者，也就是你自己的昵称<br><code>repo</code> 是你建立的仓库名字，这步一定是最前的，不然你怎么跟本地库关联。</p>
 <p>最后将本地库推送到远程库<br>执行这句 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
 <p>意思就是 推送 到 <code>origin</code> (没错这就是刚刚指代的你的远程库代称) <code>master</code> 就是远程库的 <code>master</code> 分支</p>
 <h1 id="使用ssh-key去验证自己的身份"><a href="#使用ssh-key去验证自己的身份" class="headerlink" title="使用ssh-key去验证自己的身份"></a>使用ssh-key去验证自己的身份</h1><p>可能看完上一章的童鞋会问，ssh-key是干吗用的，不是只要知道 <code>push</code> , <code>pull</code>, <code>clone</code> 命令就可以了吗？<br>看样子好像，似的。但是又不是<br>你可以自己看看 <code>图1</code> 的截图，和刚才添加命令中的地址信息，你知道 <code>https://github.com</code> 是什么意思吗？<br>我们放大 <code>图1</code> 的细节</p>
-<img src="/img/2017-10-13-2.png" title="图2">
+<img src="/img/2017-10-13-2.png" class="" title="图2">
 <p>有 <code>https</code> 和 <code>ssh</code> 选项，而且你点击哪个，他的地址就会发生改变<br>ssh: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:Lanseria/e.git<br>https: <a href="https://github.com/Lanseria/e.git" target="_blank" rel="noopener">https://github.com/Lanseria/e.git</a><br>这两种加密方式都是对你代码在 <code>tcp</code> 的传输中，不会被他人截取，所以不要想为什么没有 <code>http</code> 等等问题啦<br>我说说这两者的区别吧<br> <code>https</code> 就像你登陆网站是去输入账户和密码来验证你的身份合法<br>而 <code>ssh</code> 则采用流行于 <code>linux</code> 的 <code>ssh</code> 登陆的加密方式去管理你的账户<br>所以两者的便捷性不言而喻<br>最大的体验就是<br>https 每次重启计算机，你下次去 push , pull , clone 都需要你重新输入密码<br>而 ssh 就像你和远程的仓库， 比如 github 已经互相确认了对方的信息，只要双方的加密过的 key 正确，我就相信你</p>
 <p>所以，入门者可以用用 https 但是， 如果你用到工作中， ssh 必然会方便很多</p>
 <h2 id="如何配置"><a href="#如何配置" class="headerlink" title="如何配置"></a>如何配置</h2><p>放一个官方的地址<br><a href="https://help.github.com/articles/connecting-to-github-with-ssh/" target="_blank" rel="noopener">https://help.github.com/articles/connecting-to-github-with-ssh/</a><br>你们应该不会打我吧<br>不会百度嘛，很轻松的事<br>我来列举下期间会用到的命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;</span><br><span class="line">// 这里 -b 4096 可以不加，邮箱填写自己的注册时的帮你邮箱</span><br><span class="line">Enter a file in which to save the key (/c/Users/you/.ssh/id_rsa):[Press enter]</span><br><span class="line">// 这可能会弹出这个，意思是这个key会保存在这里，并命名为id_rsa 你可以修改他的名字，不过建议如果你不是多仓库的话还是不要改了</span><br><span class="line">Enter passphrase (empty for no passphrase): [Type a passphrase]</span><br><span class="line">Enter same passphrase again: [Type passphrase again]</span><br><span class="line">// 这两个是加密的密码，听起来很绕，但直接回车，设置为空就可以了，两下回车，第二个是comfirm的意思</span><br></pre></td></tr></table></figure>
-
 <p>最后就生成了<br>你用编辑器，打开当个目录（/c/Users/you/.ssh/）的中*.pub的文件，将里边的字符复制出来<br>放到github中ssh管理中，添加即可</p>
 <h1 id="多远程仓库的管理与配置"><a href="#多远程仓库的管理与配置" class="headerlink" title="多远程仓库的管理与配置"></a>多远程仓库的管理与配置</h1><p>来了，这个的前序章节<br>让我假装新手，百度一下<br>就这篇文章了吧<a href="https://my.oschina.net/guanyue/blog/485918" target="_blank" rel="noopener">https://my.oschina.net/guanyue/blog/485918</a><br>它说（/c/Users/you/.ssh/）下添加config配置文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Host gitlab.xxx.com ##可以随意命名，链接时使用这个名字    </span><br><span class="line">HostName gitlab.xxx.com    </span><br><span class="line">User git    </span><br><span class="line">Port 22    </span><br><span class="line">IdentityFile ~/.ssh/id_rsa_second</span><br></pre></td></tr></table></figure>
-
 <p>没了</p>
 <h1 id="一个巨大的坑（详细介绍）"><a href="#一个巨大的坑（详细介绍）" class="headerlink" title="一个巨大的坑（详细介绍）"></a>一个巨大的坑（详细介绍）</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#github HostName 和Host一定要一样，不能随便取，为什么？自己找</span><br><span class="line">Host github.com </span><br><span class="line">    HostName github.com</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa_home</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    User youreamil@qq.com</span><br></pre></td></tr></table></figure>
-
 
       
     </div>
@@ -470,7 +465,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/25/数据结构与算法笔记1-绪论/" rel="next" title="数据结构与算法笔记1--绪论">
+              <a href="/2017/09/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B01-%E7%BB%AA%E8%AE%BA/" rel="next" title="数据结构与算法笔记1--绪论">
                 <i class="fa fa-chevron-left"></i> 数据结构与算法笔记1--绪论
               </a>
             
@@ -480,7 +475,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/10/23/前端路一步步走，重新再来/" rel="prev" title="前端路一步步走，重新再来">
+              <a href="/2017/10/23/%E5%89%8D%E7%AB%AF%E8%B7%AF%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%B5%B0%EF%BC%8C%E9%87%8D%E6%96%B0%E5%86%8D%E6%9D%A5/" rel="prev" title="前端路一步步走，重新再来">
                 前端路一步步走，重新再来 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -553,7 +548,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="vhikZhangchao">
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="vhikZhangchao" />
             
               <p class="site-author-name" itemprop="name">vhikZhangchao</p>
               <p class="site-description motion-element" itemprop="description">欢迎</p>
@@ -564,9 +561,9 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -577,7 +574,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -588,7 +585,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -808,7 +805,7 @@
 
   
   
-    <script id="ribbon" type="text/javascript" size="300" alpha="0.6" zindex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
   
 
 

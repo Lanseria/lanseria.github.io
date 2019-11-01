@@ -6,10 +6,10 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
 
 
@@ -27,8 +27,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
 
 
@@ -47,7 +47,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -55,9 +55,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="git,">
+  <meta name="keywords" content="git," />
 
 
 
@@ -86,26 +86,24 @@
 
 
 
-<meta name="description" content="版本回退本文大多数引用廖老师的教程–@git教程http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000   当你需要回到之前某个版本的时候，git的真正用处就达到了 GIT LOG 官方说明NAMEgit-log - Show commit logs SYNOPSIS1$ git log">
+<meta name="description" content="版本回退本文大多数引用廖老师的教程–@git教程http:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;wiki&#x2F;0013739516305929606dd18361248578c67b8067c8c017b000   当你需要回到之前某个版本的时候，git的真正用处就达到了 GIT LOG 官方说明NAMEgit-log - Show commit logs SYNOPSIS1$ git log">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git 重拾篇">
-<meta property="og:url" content="https://lanseria.github.com/2017/06/17/git重拾篇/index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;lanseria.github.com&#x2F;2017&#x2F;06&#x2F;17&#x2F;git%E9%87%8D%E6%8B%BE%E7%AF%87&#x2F;index.html">
 <meta property="og:site_name" content="Lanseria">
-<meta property="og:description" content="版本回退本文大多数引用廖老师的教程–@git教程http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000   当你需要回到之前某个版本的时候，git的真正用处就达到了 GIT LOG 官方说明NAMEgit-log - Show commit logs SYNOPSIS1$ git log">
+<meta property="og:description" content="版本回退本文大多数引用廖老师的教程–@git教程http:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;wiki&#x2F;0013739516305929606dd18361248578c67b8067c8c017b000   当你需要回到之前某个版本的时候，git的真正用处就达到了 GIT LOG 官方说明NAMEgit-log - Show commit logs SYNOPSIS1$ git log">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://www.liaoxuefeng.com/files/attachments/001384907545599be4a60a0b5044447b47c8d8b805a25d2000/0">
-<meta property="og:image" content="http://www.liaoxuefeng.com/files/attachments/001384907584977fc9d4b96c99f4b5f8e448fbd8589d0b2000/0">
-<meta property="og:image" content="http://www.liaoxuefeng.com/files/attachments/001384907594057a873c79f14184b45a1a66b1509f90b7a000/0">
-<meta property="og:image" content="http://www.liaoxuefeng.com/files/attachments/0013849082162373cc083b22a2049c4a47408722a61a770000/0">
-<meta property="og:image" content="http://www.liaoxuefeng.com/files/attachments/001384907702917346729e9afbf4127b6dfbae9207af016000/0">
-<meta property="og:image" content="http://www.liaoxuefeng.com/files/attachments/001384907720458e56751df1c474485b697575073c40ae9000/0">
-<meta property="og:image" content="http://www.liaoxuefeng.com/files/attachments/0013849077337835a877df2d26742b88dd7f56a6ace3ecf000/0">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;files&#x2F;attachments&#x2F;001384907545599be4a60a0b5044447b47c8d8b805a25d2000&#x2F;0">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;files&#x2F;attachments&#x2F;001384907584977fc9d4b96c99f4b5f8e448fbd8589d0b2000&#x2F;0">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;files&#x2F;attachments&#x2F;001384907594057a873c79f14184b45a1a66b1509f90b7a000&#x2F;0">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;files&#x2F;attachments&#x2F;0013849082162373cc083b22a2049c4a47408722a61a770000&#x2F;0">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;files&#x2F;attachments&#x2F;001384907702917346729e9afbf4127b6dfbae9207af016000&#x2F;0">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;files&#x2F;attachments&#x2F;001384907720458e56751df1c474485b697575073c40ae9000&#x2F;0">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;files&#x2F;attachments&#x2F;0013849077337835a877df2d26742b88dd7f56a6ace3ecf000&#x2F;0">
 <meta property="og:updated_time" content="2019-09-09T02:24:54.192Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git 重拾篇">
-<meta name="twitter:description" content="版本回退本文大多数引用廖老师的教程–@git教程http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000   当你需要回到之前某个版本的时候，git的真正用处就达到了 GIT LOG 官方说明NAMEgit-log - Show commit logs SYNOPSIS1$ git log">
-<meta name="twitter:image" content="http://www.liaoxuefeng.com/files/attachments/001384907545599be4a60a0b5044447b47c8d8b805a25d2000/0">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;files&#x2F;attachments&#x2F;001384907545599be4a60a0b5044447b47c8d8b805a25d2000&#x2F;0">
 
 
 
@@ -135,7 +133,7 @@
 
 
 
-  <link rel="canonical" href="https://lanseria.github.com/2017/06/17/git重拾篇/">
+  <link rel="canonical" href="https://lanseria.github.com/2017/06/17/git重拾篇/"/>
 
 
 
@@ -178,7 +176,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
+      <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Lanseria</span>
         <span class="logo-line-after"><i></i></span>
@@ -206,9 +204,9 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -216,9 +214,9 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+          <a href="/about/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
           </a>
@@ -226,9 +224,9 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/tags/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -236,9 +234,9 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/categories/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
           </a>
@@ -246,9 +244,9 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/archives/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -258,10 +256,10 @@
       
         <li class="menu-item menu-item-search">
           
-            <a href="javascript:;" class="popup-trigger">
+            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
             搜索
           </a>
@@ -282,7 +280,9 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -319,11 +319,11 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lanseria.github.com/2017/06/17/git重拾篇/">
+    <link itemprop="mainEntityOfPage" href="https://lanseria.github.com/2017/06/17/git%E9%87%8D%E6%8B%BE%E7%AF%87/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="vhikZhangchao">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
@@ -359,7 +359,7 @@
           </span>
 
           
-            <span class="post-category">
+            <span class="post-category" >
             
               <span class="post-meta-divider">|</span>
             
@@ -371,7 +371,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
                     <span itemprop="name">技术</span>
                   </a>
                 </span>
@@ -421,16 +421,16 @@ The command takes options applicable to the git rev-list command to control what
 <p>根据官方文档来说就是展示你之前提交的<code>commit</code>的<code>log</code>信息<br>如果单单使用<code>git log</code>这条命令<br>它会展示的信息有<br><code>commit id</code><br><code>Author name&lt;email&gt;</code><br><code>Date time</code><br>加上 一条<code>commit</code>当时的注释说明<br>如果想看得更加清楚一些 可以单行显示一个版本</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log --pretty=oneline</span><br></pre></td></tr></table></figure>
 <p>你大可以把它想象成一条时间线，这三个事件按照某种方式连接着，有这样抽象的概念之后，你就可以知道如何回去之前某个版本是如何实现了</p>
-<img src="http://www.liaoxuefeng.com/files/attachments/001384907545599be4a60a0b5044447b47c8d8b805a25d2000/0" title="时间线">
+<img src="http://www.liaoxuefeng.com/files/attachments/001384907545599be4a60a0b5044447b47c8d8b805a25d2000/0" class="" title="时间线">
 
 <p>git中，<code>HEAD</code>记录现在的<code>commit id</code>也就是为什么你现在的项目打开是你现在所想要的内容，不过我们现在需要回到上一个版本，也就是让HEAD存储上一个版本的<code>commit id</code><br>怎么做呢？</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard HEAD &lt;commit id&gt;</span><br></pre></td></tr></table></figure>
 <p>或如只是单单回到上一个版本有其他简单的方法</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard HEAD^</span><br></pre></td></tr></table></figure>
 <p>上上一个版本就是<code>HEAD^^</code>，当然往上100个版本写100个^比较容易数不过来，所以写成<code>HEAD~100</code>。<br>但是，如果我们后悔回退了怎么办？比如之前有比较重要的信息<br>办法其实就还是那些，只要你记住了那些版本号就可以回去，所以一般你的命令行不要关闭，版本号的信息还存留在你的缓存区<br>Git的版本回退速度非常快，因为Git在内部有个指向当前版本的HEAD指针，当你回退版本的时候，Git仅仅是把HEAD从指向<code>append GPL</code>：</p>
-<img src="http://www.liaoxuefeng.com/files/attachments/001384907584977fc9d4b96c99f4b5f8e448fbd8589d0b2000/0" title="HEAD1">
+<img src="http://www.liaoxuefeng.com/files/attachments/001384907584977fc9d4b96c99f4b5f8e448fbd8589d0b2000/0" class="" title="HEAD1">
 <p>改为指向<code>add distributed</code>：</p>
-<img src="http://www.liaoxuefeng.com/files/attachments/001384907594057a873c79f14184b45a1a66b1509f90b7a000/0" title="HEAD1">
+<img src="http://www.liaoxuefeng.com/files/attachments/001384907594057a873c79f14184b45a1a66b1509f90b7a000/0" class="" title="HEAD1">
 <p>现在，你回退到了某个版本，关掉了电脑，第二天早上就后悔了，想恢复到新版本怎么办？找不到新版本的<code>commit id</code>怎么办？</p>
 <p>在Git中，总是有后悔药可以吃的。当你用<code>$ git reset --hard HEAD^</code>回退到<code>add distributed</code>版本时，再想恢复到<code>append GPL</code>，就必须找到<code>append GPL</code>的<code>commit id</code>。Git提供了一个命令<code>git reflog</code>用来记录你的每一次命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git reflog</span><br><span class="line">ea34578 HEAD@&#123;0&#125;: reset: moving to HEAD^</span><br><span class="line">3628164 HEAD@&#123;1&#125;: commit: append GPL</span><br><span class="line">ea34578 HEAD@&#123;2&#125;: commit: add distributed</span><br><span class="line">cb926e7 HEAD@&#123;3&#125;: commit (initial): wrote a readme file</span><br></pre></td></tr></table></figure>
@@ -448,9 +448,9 @@ The command takes options applicable to the git rev-list command to control what
 <h1 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h1><blockquote><p>Git和其他版本控制系统如SVN的一个不同之处就是有暂存区的概念。</p>
 </blockquote>
 <h2 id="工作区（Working-Directory）"><a href="#工作区（Working-Directory）" class="headerlink" title="工作区（Working Directory）"></a>工作区（Working Directory）</h2><p>就是你在电脑里能看到的目录，比如我的learngit文件夹就是一个工作区：</p>
-<img src="http://www.liaoxuefeng.com/files/attachments/0013849082162373cc083b22a2049c4a47408722a61a770000/0" title="工作区">
+<img src="http://www.liaoxuefeng.com/files/attachments/0013849082162373cc083b22a2049c4a47408722a61a770000/0" class="" title="工作区">
 <h2 id="版本库（Repository）"><a href="#版本库（Repository）" class="headerlink" title="版本库（Repository）"></a>版本库（Repository）</h2><p>工作区有一个隐藏目录<code>.git</code>，这个不算工作区，而是Git的版本库。<br>Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支<code>master</code>，以及指向<code>master</code>的一个指针叫<code>HEAD</code>。</p>
-<img src="http://www.liaoxuefeng.com/files/attachments/001384907702917346729e9afbf4127b6dfbae9207af016000/0" title="版本库">
+<img src="http://www.liaoxuefeng.com/files/attachments/001384907702917346729e9afbf4127b6dfbae9207af016000/0" class="" title="版本库">
 <p>分支和<code>HEAD</code>的概念我们以后再讲。<br>前面讲了我们把文件往Git版本库里添加的时候，是分两步执行的：<br>第一步是用<code>git add</code>把文件添加进去，实际上就是把文件修改添加到暂存区；<br>第二步是用<code>git commit</code>提交更改，实际上就是把暂存区的所有内容提交到当前分支。<br>因为我们创建Git版本库时，Git自动为我们创建了唯一一个<code>master</code>分支，所以，现在，<code>git commit</code>就是往<code>master</code>分支上提交更改。<br>你可以简单理解为，需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。<br>俗话说，实践出真知。现在，我们再练习一遍，先对<code>readme.txt</code>做个修改，比如加上一行内容：</p>
 <blockquote><p>Git is a distributed version control system.<br>Git is free software distributed under the GPL.<br>Git has a mutable index called stage.</p>
 </blockquote>
@@ -459,11 +459,11 @@ The command takes options applicable to the git rev-list command to control what
 <p>Git非常清楚地告诉我们，<code>readme.txt</code>被修改了，而<code>LICENSE</code>还从来没有被添加过，所以它的状态是<code>Untracked</code>。<br>现在，使用两次命令<code>git add</code>，把<code>readme.txt</code>和<code>LICENSE</code>都添加后，用<code>git status</code>再查看一下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line"># On branch master</span><br><span class="line"># Changes to be committed:</span><br><span class="line">#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)</span><br><span class="line">#</span><br><span class="line">#       new file:   LICENSE</span><br><span class="line">#       modified:   readme.txt</span><br><span class="line">#</span><br></pre></td></tr></table></figure>
 <p>现在，暂存区的状态就变成这样了：</p>
-<img src="http://www.liaoxuefeng.com/files/attachments/001384907720458e56751df1c474485b697575073c40ae9000/0" title="暂存区变化了">
+<img src="http://www.liaoxuefeng.com/files/attachments/001384907720458e56751df1c474485b697575073c40ae9000/0" class="" title="暂存区变化了">
 <p>所以，<code>git add</code>命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行<code>git commit</code>就可以一次性把暂存区的所有修改提交到分支。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line"># On branch master</span><br><span class="line">nothing to commit (working directory clean)</span><br></pre></td></tr></table></figure>
 <p>现在版本库变成了这样，暂存区就没有任何内容了：</p>
-<img src="http://www.liaoxuefeng.com/files/attachments/0013849077337835a877df2d26742b88dd7f56a6ace3ecf000/0" title="暂存区没有任何内容">
+<img src="http://www.liaoxuefeng.com/files/attachments/0013849077337835a877df2d26742b88dd7f56a6ace3ecf000/0" class="" title="暂存区没有任何内容">
 
 <h2 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h2><ul>
 <li><p>暂存区是Git非常重要的概念，弄明白了暂存区，就弄明白了Git的很多操作到底干了什么。</p>
@@ -541,7 +541,7 @@ The command takes options applicable to the git rev-list command to control what
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/13/javascript中的Function函数/" rel="next" title="Javascript 中的 Function 函数">
+              <a href="/2017/06/13/javascript%E4%B8%AD%E7%9A%84Function%E5%87%BD%E6%95%B0/" rel="next" title="Javascript 中的 Function 函数">
                 <i class="fa fa-chevron-left"></i> Javascript 中的 Function 函数
               </a>
             
@@ -551,7 +551,7 @@ The command takes options applicable to the git rev-list command to control what
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/06/18/Git远程仓库/" rel="prev" title="Git远程仓库">
+              <a href="/2017/06/18/Git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" rel="prev" title="Git远程仓库">
                 Git远程仓库 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -624,7 +624,9 @@ The command takes options applicable to the git rev-list command to control what
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="vhikZhangchao">
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="vhikZhangchao" />
             
               <p class="site-author-name" itemprop="name">vhikZhangchao</p>
               <p class="site-description motion-element" itemprop="description">欢迎</p>
@@ -635,9 +637,9 @@ The command takes options applicable to the git rev-list command to control what
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -648,7 +650,7 @@ The command takes options applicable to the git rev-list command to control what
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -659,7 +661,7 @@ The command takes options applicable to the git rev-list command to control what
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -879,7 +881,7 @@ The command takes options applicable to the git rev-list command to control what
 
   
   
-    <script id="ribbon" type="text/javascript" size="300" alpha="0.6" zindex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
   
 
 
